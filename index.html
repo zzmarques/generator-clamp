@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Gerador de clamp</title>
+</head>
+<body>
+    <main  class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+        <section class="card d-flex flex-column justify-content-center align-items-center">
+            <h1 class="mb-4">Gerador de <code>clamp()</code></h1>
+
+            <form class="container-fluid p-0">
+                <div class="form-group d-flex flex-column mb-4 ">
+                    <label for="min-px" class="form-label">Tamanho mínimo da fonte (px)</label>
+                    <input type="number" name="min-px" class="form-control shadow-none" id="min-px">
+                </div>
+
+                <div class="form-group d-flex flex-column mb-4">
+                    <label for="max-px" class="form-label">Tamanho máximo da fonte (px)</label>
+                    <input type="number" name="max-px" class="form-control shadow-none"  id="max-px">
+                </div>
+
+                <div class="form-group d-flex flex-column mb-4">
+                    <label for="min-viewport" class="form-label">Largura mínima do viewport (px)</label>
+                    <input type="number" name="min-viewport" class="form-control shadow-none" id="min-viewport">
+                </div>
+
+                <div class="form-group d-flex flex-column mb-4">
+                    <label for="max-viewport" class="form-label">Largura máxima do viewport (px)</label>
+                    <input type="number" name="max-viewport" class="form-control shadow-none" id="max-viewport">
+                </div>
+
+                <div class="container-fluid"></div>
+                    <button type="submit" class="btn btn-outline-primary w-100 rounded">Gerar</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="container-fluid mt-3 rounded output" aria-live="polite"></div>
+
+        </section>
+    </main>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
